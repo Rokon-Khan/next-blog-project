@@ -1,9 +1,13 @@
-export default function Dashboard() {
+"use client";
+import ProtectedRoute from "../hoc/protectedRoute";
+
+const Dashboard = ({ user }) => {
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center">
-        Welcome to Dashboard Page
-      </h1>
+      <h1>Welcome, {user?.first_name || "User"}!</h1>
+      <p>This is your dashboard.</p>
     </div>
   );
-}
+};
+
+export default ProtectedRoute(Dashboard);
