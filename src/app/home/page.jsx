@@ -1,6 +1,6 @@
 "use client";
 
-import PostList from "../app/components/Posts/PostList";
+import PostList from "../components/Posts/PostList";
 
 export default function Home() {
   return (
